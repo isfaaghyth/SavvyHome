@@ -6,13 +6,13 @@
 #define DHTTYPE DHT11
 
 //API Key
-String apiKeyTemp = "FQ1XXOM4HDE3P896";
-String apiKeyMotion = "XGT4L14E8NN0N75N";
-String apiKeyWater = "66YOISL32PHX01OQ";
+String apiKeyTemp = "******";
+String apiKeyMotion = "******";
+String apiKeyWater = "******";
 
 //WiFi Conf
-const char* ssid = "IVAL";
-const char* password = "jokam354";
+const char* ssid = "******";
+const char* password = "******";
 const char* server = "api.thingspeak.com";
 
 //Pin Acquire
