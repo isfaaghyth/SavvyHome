@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:src="@drawable/ic_elec" />
+
+        <com.pixplicity.fontview.FontTextView
+            android:id="@+id/nama_icon"
+            style="@style/FontTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/icon"
+            android:text="Electric"
+            android:textColor="#5e5e5e"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <com.pixplicity.fontview.FontTextView
+            style="@style/FontTextViewStyle"
+            android:id="@+id/value_kwh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/type"
+            android:text="180"
+            android:textColor="#5e5e5e"
+            android:textSize="13dp" />
+
+        <com.pixplicity.fontview.FontTextView
+            android:id="@+id/type"
+            style="@style/FontTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_alignParentEnd="true"
+            android:text="kwh"
+            android:layout_marginRight="12dp"
+            android:textColor="#5e5e5e"
+            android:textSize="10dp" />
+
+
+    </RelativeLayout>
+
+    <com.pixplicity.fontview.FontTextView
+        style="@style/FontTextViewStyle"
+        android:id="@+id/desc_kwh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="-10dp"
+        android:text="Available 3 Device Switch on"
+        android:layout_marginRight="12dp"
+        android:textColor="#797979"
+        android:layout_marginBottom="18dp"
+        android:textSize="11dp" />
+</LinearLayout>

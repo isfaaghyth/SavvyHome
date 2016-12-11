@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="#FFF"
+    android:layout_marginBottom="3dp"
+    app:cardPreventCornerOverlap="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/on"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="12dp"
+            android:visibility="visible"
+            android:src="@drawable/ic_off"/>
+
+        <com.pixplicity.fontview.FontAppCompatTextView
+            android:id="@+id/nama_lampu"
+            style="@style/FontTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lampu Kamar"
+            android:layout_toRightOf="@+id/on"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="#a1a1a1"
+            android:textSize="15dp" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/bg_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="onCheckedChange" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

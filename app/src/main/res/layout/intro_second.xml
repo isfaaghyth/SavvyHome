@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/welcome_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipChildren="false"
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/c"
+            android:layout_width="280dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/gbr_b" />
+
+        <ImageView
+            android:id="@+id/b"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/gbr_a" />
+
+        <com.pixplicity.fontview.FontTextView
+            style="@style/FontTextViewStyle"
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/b"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Organize Your Home"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#767575" />
+
+        <com.pixplicity.fontview.FontTextView
+            style="@style/FontTextViewStyle"
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/heading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="center"
+            android:textColor="#a2a7a7a7"
+            android:text="Control your Room and Device"/>
+
+    </RelativeLayout>
+</RelativeLayout>

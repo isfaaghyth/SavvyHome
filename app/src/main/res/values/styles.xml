@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/belakang</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="FontTextViewStyle" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="pix_font">fonts/QanelasSoftDEMO-Medium.ttf</item>
+        <item name="pix_fontBold">fonts/QanelasSoftDEMO-ExtraBold.otf</item>
+        <item name="pix_fontItalic">fonts/Muli-Italic.ttf</item>
+        <item name="pix_fontBoldItalic">fonts/Muli-BoldItalic.ttf</item>
+    </style>
+
+    <style name="FontButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="pix_font">fonts/ProductSans.ttf</item>
+        <item name="pix_fontBold">fonts/ProductSans.ttf</item>
+        <item name="pix_fontItalic">fonts/Muli-Italic.ttf</item>
+        <item name="pix_fontBoldItalic">fonts/Muli-Italic.ttf</item>
+    </style>
+
+    <style name="ToolBarWithNavigationBack">
+        <item name="navigationIcon">@drawable/abc_ic_ab_back_mtrl_am_alpha</item>
+        <item name="android:drawableTint">#737373</item>
+    </style>
+
+</resources>

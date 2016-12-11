@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dim_foreground_disabled_material_dark" />
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/circles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <com.pixplicity.fontview.FontAppCompatButton
+                style="@style/FontButtonStyle"
+                android:id="@+id/done"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/item_intro"
+                android:layout_gravity="center"
+                android:text="Done"
+                android:textColor="@color/abc_primary_text_material_dark"
+                android:textSize="14dp"
+                android:visibility="gone" />
+
+            <com.pixplicity.fontview.FontAppCompatButton
+                style="@style/FontButtonStyle"
+                android:id="@+id/next"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/item_intro"
+                android:layout_gravity="center"
+                android:text="Next"
+                android:textSize="14dp"
+                android:textColor="@color/abc_primary_text_material_dark"
+                android:visibility="visible"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

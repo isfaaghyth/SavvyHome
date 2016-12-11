@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Savvy Home</string>
+    <string name="action_settings">Settings</string>
+    <string name="kosong"></string>
+    <string name="exit">Do You want to exit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="sisa">Sisa Air</string>
+    <string name="sisa_gas">Sisa Gas</string>
+</resources>
