@@ -1,5 +1,10 @@
 #include <DHT.h>
 #include <ESP8266WiFi.h>
+#include <Servo.h>
+
+//Servo
+Servo garage;
+int pos = 0;
 
 //DHT Pin
 #define DHTPIN D4
@@ -22,7 +27,7 @@ const int lampGreen = D7;
 const int lampMotion = D2;
 const int lampRoom1 = D0;
 const int lampRoom2 = D5;
-const int lampRoom3 = D6;
+const int garageMotor = D6;
 const int motionSensor = D1;
 const int buzzerPin = D8;
 
@@ -51,9 +56,9 @@ void setup()
   pinMode(lampMotion, OUTPUT);
   pinMode(lampRoom1, OUTPUT);
   pinMode(lampRoom2, OUTPUT);
-  pinMode(lampRoom3, OUTPUT);
   pinMode(buzzerPin, OUTPUT);
   pinMode(motionSensor, INPUT);
+  garage.attach(garageMotor);
   
   WiFi.begin(ssid, password);
 
@@ -65,7 +70,7 @@ void setup()
     delay(500);
     Serial.print(".");
   }
-  
+
   Serial.println("");
   Serial.println("WiFi connected");
 }
@@ -73,6 +78,7 @@ void setup()
 void loop()
 {
   getSystemStatus();
+
   if(systemStatus == 1) {
     postTempHumd();
     motionSensorDetection();
@@ -80,12 +86,33 @@ void loop()
     
     getLamp(1);
     getLamp(2);
-    getLamp(3);
+    getLamp(4);
   } else {
     Serial.println("System Not Active");
     digitalWrite(lampRoom1, LOW);
     digitalWrite(lampRoom2, LOW);
-    digitalWrite(lampRoom3, LOW);
+  }
+}
+
+int servoLength = 0;
+
+void openGarage() {
+  if(servoLength == 0) {
+    for(int i=0; i<90; i++) {
+      garage.write(i);
+      delay(5);
+    }
+    servoLength = 90;
+  }
+}
+
+void closeGarage() {
+  if(servoLength == 90) {
+    for(int i=90; i>=1; i--) {
+      garage.write(i);
+      delay(5);
+    }
+    servoLength = 0;
   }
 }
 
@@ -304,16 +331,16 @@ void getLamp(int lampNum)
           digitalWrite(lampRoom1, HIGH);
         } else if(lampNum == 2) {
           digitalWrite(lampRoom2, HIGH);
-        } else if(lampNum == 3) {
-          digitalWrite(lampRoom3, HIGH);
+        } else if(lampNum == 4) {
+          closeGarage();
         }
       } else {
         if(lampNum == 1) {
           digitalWrite(lampRoom1, LOW);
         } else if(lampNum == 2) {
           digitalWrite(lampRoom2, LOW);
-        } else if(lampNum == 3) {
-          digitalWrite(lampRoom3, LOW);
+        } else if(lampNum == 4) {
+          openGarage();
         }
       }
 }
