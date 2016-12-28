@@ -4,6 +4,7 @@ Smart Home Controller using Thingspeak + Retrofit2
 Savvy Home is the controller for smart home project that created by Android Studio 2.2.3
 There is also the Arduino Code that you can use.
 
+Video Demo:
 [![Alt text for your video](http://img.youtube.com/vi/Zm5zTYciLhA/0.jpg)](https://www.youtube.com/watch?v=Zm5zTYciLhA&feature=youtu.be)
 
 ## What Modules used
