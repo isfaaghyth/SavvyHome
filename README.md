@@ -4,7 +4,7 @@ Smart Home Controller using Thingspeak + Retrofit2
 Savvy Home is the controller for smart home project that created by Android Studio 2.2.3
 There is also the Arduino Code that you can use.
 
-[![Alt text for your video](http://img.youtube.com/vi/T-D1KVIuvjA/0.jpg)](http://www.youtube.com/watch?v=T-D1KVIuvjA)
+[![Alt text for your video](http://img.youtube.com/vi/Zm5zTYciLhA/0.jpg)](https://www.youtube.com/watch?v=Zm5zTYciLhA&feature=youtu.be)
 
 ## What Modules used
 1. WeMos D1 Mini
@@ -25,7 +25,7 @@ The Schematic Diagram will be uploaded soon...
 5. Motion Detection Alert
 
 ## Usage
-Design your IoT, open the Project using Android Studio and change All of Thingspeak channel ID and api key
+Design your IoT, open the Project using Android Studio and change all of Thingspeak channel ID and api key with yours
 
 ## Contributing
 1. Fork it!
